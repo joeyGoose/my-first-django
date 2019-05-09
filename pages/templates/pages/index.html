@@ -1,0 +1,9 @@
+{% if latest_visitor_list %}
+    <ul>
+    {% for visitor in latest_visitor_list %}
+        <li><a href="/pages/{{ visitor.id }}/">{{ visitor.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No visitors are available.</p>
+{% endif %}
